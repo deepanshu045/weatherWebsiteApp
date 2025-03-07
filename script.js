@@ -7,7 +7,7 @@ const searchButton = document.querySelector("button")
 const imageCondt = document.querySelector("#hero")
 
 //Getting User Nearest City
-fetch("https://ipinfo.io/json?token=102ff997ae2792")
+fetch("https://ipinfo.io/json?token={Your api Key}")  \\Your api key
     .then(response => response.json())
     .then(data => {
         search(data.city)
@@ -16,7 +16,7 @@ fetch("https://ipinfo.io/json?token=102ff997ae2792")
 
 //Function of Weather Api
   function search(cityname) {
-    const apikey = 'a3de96ad2cc23217745e523b7013441d'
+    const apikey = 'Your api key' \\your api key
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&units=metric&appid=${apikey}`
     
     fetch(url)
